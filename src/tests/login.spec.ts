@@ -20,7 +20,7 @@ test.describe('Login Page Tests', () => {
       await expect(page).toHaveURL(/logged=true/);
     });
 
-    test.only('TC-102: User can preview their password input value when they click eye icon', async () => {
+    test('TC-102: User can preview their password input value when they click eye icon', async () => {
       await loginPage.fillPasswordInput(validPassword);
       await loginPage.clickPasswordPreviewButton();
       await loginPage.verifyPasswordInputValue(validPassword);
@@ -45,5 +45,5 @@ test.describe('Login Page Tests', () => {
       await loginPage.login(invalidCreds.email, invalidCreds.password);
       await expect(page).toHaveURL(/email=false&password=false/);
     });
-    })
   });
+});
