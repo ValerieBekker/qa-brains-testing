@@ -17,7 +17,7 @@ test.describe('Feedback Component Tests', () => {
   });
 
   test.describe('Feedback Negative Tests', () => {
-    test.only('TC-201: User cannot submit feedback if they are not signed in', async () => {
+    test('TC-201: User cannot submit feedback if they are not signed in', async () => {
       await feedbackComponent.submitFeedback(feedbackText);
       const isModalVisible = await signInRequiredModal.isVisible();
       expect(isModalVisible).toBeTruthy();
