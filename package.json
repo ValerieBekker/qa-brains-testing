@@ -4,7 +4,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test-headed": "npx playwright test --headed"
+    "test": "npx playwright test",
+    "test-headed": "npx playwright test --headed",
+    "lint:fix": "npx eslint --fix",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
